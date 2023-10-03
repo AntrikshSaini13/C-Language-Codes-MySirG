@@ -3,7 +3,7 @@
 int main()
 {
     int size;
-    size = sizeof(4);
+    size = sizeof(4.5);
     printf("\"The size of  real constant is = %d\"",size);
     return 0;
 }
