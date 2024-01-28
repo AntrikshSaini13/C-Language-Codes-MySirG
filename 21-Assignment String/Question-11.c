@@ -25,5 +25,10 @@ void main(){
         if(countVowels(str[i]))
             count++;  
 
-    printf("\nNumber Consonats %d\n",count);    
+    printf("Number Consonats %d\n",count);    
 }
+
+// output:
+// Enter the String :
+// aman Saini
+// Number Consonats 5
