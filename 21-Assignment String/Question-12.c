@@ -1,3 +1,4 @@
+
 // Count Space Of User Enter String 
 
 #include<stdio.h>
@@ -27,3 +28,7 @@ void main(){
 
     printf("Number of Space in Santance is %d",count);
 }
+
+// Enter the Santance of String
+// amantriksh  saini
+// Number of Space in Santance is 2

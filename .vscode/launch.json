@@ -2,6 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Demo",
+      "request": "launch",
+      "mainClass": "Demo",
+      "projectName": "C-Language-Coding-In-Depth-Instructer--MySirG_2cf89465"
+    },
+    {
+      "type": "java",
+      "name": "OopsTest",
+      "request": "launch",
+      "mainClass": "OopsTest",
+      "projectName": "C-Language-Coding-In-Depth-Instructer--MySirG_2cf89465"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

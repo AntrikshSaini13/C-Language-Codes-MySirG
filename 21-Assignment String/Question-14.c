@@ -1,4 +1,6 @@
+
 // hERE lower case for code which of upper albhabet conver into lower alphabet
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -22,3 +24,8 @@ void main(){
 
     printf(str);    
 }
+
+// Output :
+// Enter the Name In String 
+// Aman
+// aman
