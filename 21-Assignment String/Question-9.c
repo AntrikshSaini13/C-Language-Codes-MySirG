@@ -1,38 +1,34 @@
-// here we are cheak occurance of word
 
-#include <stdio.h>
-#include <string.h>
+
+// Count the Digit and alphatbet and number
+
+#include<stdio.h>
+#include<string.h>
 #include<stdlib.h>
-char occuranceCheak(char str1[],char str2[]); 
-char occuranceCheak(char str1[],char str2[]){
 
-    printf("Here we are checking occurance of word\n");
-
-    int count = 0;
-    for(int i=0,j=0; str1[i];i++,j++){
-        if(str1[i]==str2[j]&&str1[i]!=' '){
-            printf("\n%c  == %c\n",str1[i],str2[j]);
-        }
-        else{
-            j=0;
-            // count++;
-        }
-    }
-    return count;
-} 
 void main(){
     system("cls");
+    char str[100];
+    int digit = 0, smallAlpha = 0, captialAlpha = 0, specialCharacter = 0;
+    puts("Enter The name Of in String");
+    fgets(str,100,stdin);
 
-    char str1[10][100]={}, str2[100]={};
+    str[strlen(str)-1]='\0';
 
-    puts("Enter the String ");
-    fgets(str1,100,stdin);
-    str1[strlen(str1)-1] = '\0';
-    
-    puts("Enter the String ");
-    fgets(str2,100,stdin);
-    str1[strlen(str2)-1] = '\0';
+    for(int i = 0;str[i];i++){
+        if(48 <= str[i] && str[i]<=57)digit++;       
+        else if (str[i] <= 90 && 65 <= str[i] )captialAlpha++;
+        else if (str[i] <= 122 && 97 <= str[i] ) smallAlpha++;
+        else specialCharacter++;       
+    }
 
-    printf("is repeat only %d",occuranceCheak(str1,str2));
-
+    printf(" Number %d \n Small Letter %d \n Capital Letter %d \n Special Character %d",digit,smallAlpha,captialAlpha,specialCharacter);
 }
+
+// Output :
+// Enter The name Of in String
+// AntrikshSaini13@gmail.com[Aman] 
+//  Number 2
+//  Small Letter 22
+//  Capital Letter 3
+//  Special Character 4

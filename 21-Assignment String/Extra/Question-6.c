@@ -1,3 +1,5 @@
+//here we are finding the lenth of String by using the fgets() function
+
 # include <stdio.h>
 void main(){
     int i ;

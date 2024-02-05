@@ -1,20 +1,34 @@
-// user define String
+// Count Consonats of Given String
 
 #include<stdio.h>
-void main(){
-    char str[1];
-
-    puts("Enter the name of person");
-    gets(str);
-
-    printf("%s",str);
-
-    for(int i; str[i];i++){
-        printf("%c",str[i]);
+#include<string.h>
+#include<stdlib.h>
+int countVowels(char ch);
+int countVowels(char ch){
+    if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+        return 0;
+    }
+    else{
+        return 1;
     }
 }
+void main(){
+    system("cls");
+    char str[100]={};
+    int count=0;
 
-// output
-// Enter the name of person
-// aman saini
-// aman saini
+    puts("Enter the String :");
+    fgets(str,100,stdin);
+    str[strlen(str)-1]='\0';
+
+    for(int i = 0; str[i]; i++)
+        if(countVowels(str[i]))
+            count++;  
+
+    printf("Number Consonats %d\n",count);    
+}
+
+// output:
+// Enter the String :
+// aman Saini
+// Number Consonats 5

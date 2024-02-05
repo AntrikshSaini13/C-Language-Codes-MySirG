@@ -1,13 +1,36 @@
-// print the string Length
+// here we are cheak occurance of character
 
-# include <Stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+char occuranceCheak(char str[],char ch); 
+char occuranceCheak(char str[],char ch){
+
+    printf("Here we are checking occurance of word\n");
+
+    int count = 0;
+    for(int i = 0; str[i];i++){
+        
+        // printf("%c == %c\n",str[i],ch);
+        // system("cls");
+        if(str[i]==ch){
+            count++;
+        }
+    }
+    return count;
+} 
 void main(){
-    char str[10] = {'B','h','o','p','a','l'};
-    int i;
-    for(i=0;str[i];i++);
+    system("cls");
 
-    printf("Length of String is : %d",i);
+    char str[100]={},ch;
+
+    puts("Enter the String ");
+    fgets(str,100,stdin);
+    str[strlen(str)-1] = '\0';
+
+    puts("Enter any character for check occurance String  :");
+    scanf("%c",&ch);
+
+    printf("\n%c is repeat only %d",ch,occuranceCheak(str,ch));
+
 }
-
-// output
-// Length of String is : 6

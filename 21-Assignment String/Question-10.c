@@ -1,29 +1,20 @@
-// count Vowels given String 
+// Copy one String to another String
 
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-int countVowels(char ch);
-int countVowels(char ch){
-    if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
 void main(){
     system("cls");
-    char str[100]={};
-    int count=0;
+    char str[100]={}, str2[100]= {};
 
-    puts("Enter the String :");
+    puts("Enter the String ");
     fgets(str,100,stdin);
     str[strlen(str)-1]='\0';
 
-    for(int i = 0; str[i]; i++)
-        if(countVowels(str[i]))
-            count++;  
+    for(int i=0,j=0;str[i];i++,j++){
+        str2[j]=str[i];
+    }
 
-    printf("\nNumber Vowels %d\n",count);    
+    printf("the str1 is : %s\n",str);
+    printf("the str2 is : %s",str2);
 }

@@ -1,34 +1,29 @@
-// Count Consonats of Given String
+//  The First Occurance of given character
 
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-int countVowels(char ch);
-int countVowels(char ch){
-    if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
-        return 0;
+
+int findOccurance(char str1[],char ch);
+int findOccurance(char str1[],char ch){
+    for(int i = 0 ; str1[i]; i++){
+        if(str1[i]==ch){
+            return ++i;
+        }
     }
-    else{
-        return 1;
-    }
+    
 }
+
 void main(){
-    system("cls");
-    char str[100]={};
-    int count=0;
+    system("Cls");
+    char str1[100]={},ch;int i;
 
-    puts("Enter the String :");
-    fgets(str,100,stdin);
-    str[strlen(str)-1]='\0';
+    puts("Enter the String");
+    fgets(str1,100,stdin);
+    str1[strlen(str1)-1]='\0';
 
-    for(int i = 0; str[i]; i++)
-        if(countVowels(str[i]))
-            count++;  
+    puts("Enter the Charcter for Find Occurance");
+    scanf("%c",&ch);
 
-    printf("Number Consonats %d\n",count);    
+    printf("The First Occurance of given character is = %d",findOccurance(str1,ch));
 }
-
-// output:
-// Enter the String :
-// aman Saini
-// Number Consonats 5

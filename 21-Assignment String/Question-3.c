@@ -1,18 +1,29 @@
-// use the scanf for enter the vale of String value
+// count Vowels given String 
 
-# include<stdio.h>
-void main(){
-    char str[100];
-    printf("Enter the values of String\n");
-    scanf("%s",str);
-
-    printf("%s",str);
-
-    for(int i=0;str[i];i++){
-        printf("%s",str[i]);
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int countVowels(char ch);
+int countVowels(char ch){
+    if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+        return 1;
+    }
+    else{
+        return 0;
     }
 }
+void main(){
+    system("cls");
+    char str[100]={};
+    int count=0;
 
-// output :Enter the values of String
-            // aman asian
-            // aman
+    puts("Enter the String :");
+    fgets(str,100,stdin);
+    str[strlen(str)-1]='\0';
+
+    for(int i = 0; str[i]; i++)
+        if(countVowels(str[i]))
+            count++;  
+
+    printf("\nNumber Vowels %d\n",count);    
+}

@@ -1,35 +1,32 @@
-// here we are cheak occurance of character
 
-#include <stdio.h>
-#include <string.h>
+// reverse the String
+
+#include<stdio.h>
+#include<string.h>
 #include<stdlib.h>
-char occuranceCheak(char str[],char ch); 
-char occuranceCheak(char str[],char ch){
-
-    printf("Here we are checking occurance of word\n");
-
-    int count = 0;
-    for(int i = 0; str[i];i++){
-        
-        printf("%c == %c\n",str[i],ch);
-        if(str[i]==ch){
-            count++;
-        }
-    }
-    return count;
-} 
 void main(){
     system("cls");
 
-    char str[100]={},ch;
-
-    puts("Enter the String ");
+    char str[100] = {};
+    char str2[100]={};
+    int count=0,i,j,len;
+    
+    puts("Enter the Santance of String");
     fgets(str,100,stdin);
-    str[strlen(str)-1] = '\0';
+    str[strlen(str)-1]='\0';
 
-    puts("Enter any character for check occurance String  :");
-    scanf("%c",&ch);
+    for(i=0;str[i];i++);
+    for(j=0;i>=0;j++){
+        str2[j] = str[--i];
+    }  
+    str2[j]='\0';
+    printf("Reverse %s",str2);
 
-    printf("\n%c is repeat only %d",ch,occuranceCheak(str,ch));
+    // Output :
 
+    // Enter the Santance of String
+    // Aman
+    // Reverse namA
+    
+    
 }
