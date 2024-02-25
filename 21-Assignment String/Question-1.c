@@ -9,8 +9,7 @@ char occuranceCheak(char str[],char ch){
     printf("Here we are checking occurance of word\n");
 
     int count = 0;
-    for(int i = 0; str[i];i++){
-        
+    for(int i = 0; str[i];i++){        
         // printf("%c == %c\n",str[i],ch);
         // system("cls");
         if(str[i]==ch){

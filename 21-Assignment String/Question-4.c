@@ -4,6 +4,7 @@
 #include<string.h>
 #include<stdlib.h>
 int countVowels(char ch);
+// here check the Vovels or not
 int countVowels(char ch){
     if(ch=='a' || ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
         return 0;
