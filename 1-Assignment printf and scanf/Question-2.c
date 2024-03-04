@@ -1,6 +1,4 @@
 #include<stdio.h>
-int main()
-{
-    printf("Hello\nStudents");
-    return 0;
+void main(){
+    printf("Hello\nStident");// \n for next line
 }
